@@ -1,0 +1,30 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net9.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Repositories\**" />
+    <EmbeddedResource Remove="Repositories\**" />
+    <None Remove="Repositories\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Remove="Legacy\ZVAzione.cs" />
+    <Compile Remove="Legacy\ZVOperazione.cs" />
+    <Compile Remove="Legacy\ZVStato.cs" />
+    <Compile Remove="Legacy\ZVWorkflow.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Legacy\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\BpmInfrastructure\BpmInfrastructure.csproj" />
+  </ItemGroup>
+
+</Project>

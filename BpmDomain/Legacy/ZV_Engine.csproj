@@ -1,0 +1,986 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="12.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{9E8F889A-2BE7-47C8-87D8-747D0D785E35}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ZV_Engine</RootNamespace>
+    <AssemblyName>ZV_Engine</AssemblyName>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <PublishUrl>http://localhost/LAVEngine/</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Web</InstallFrom>
+    <UpdateEnabled>true</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>true</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\..\..\_bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <UseVSHostingProcess>true</UseVSHostingProcess>
+    <DocumentationFile>..\..\..\_bin\ZV_Engine.XML</DocumentationFile>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\..\..\_bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>..\..\..\_bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <OutputPath>..\..\..\_bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <CodeAnalysisRuleAssemblies>C:\Programmi\Microsoft Visual Studio 8\Team Tools\Static Analysis Tools\FxCop\\rules</CodeAnalysisRuleAssemblies>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CSD.Framework.Security, Version=1.0.0.0, Culture=neutral, PublicKeyToken=06ec2a17094a1337, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\BinComuni\CSD_NET_4.0\CSD\Framework\CSD.Framework.Security.dll</HintPath>
+    </Reference>
+    <Reference Include="CSD.Framework.Utility, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\CSD.Framework\CSD.Framework.Utility.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Newtonsoft.Json, Version=13.0.1.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\packages\Newtonsoft.Json.13.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="..\GlobalAssemblyInfo.cs">
+      <Link>Properties\GlobalAssemblyInfo.cs</Link>
+    </Compile>
+    <Compile Include="CustomMessageBox.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CustomMessageBox.Designer.cs">
+      <DependentUpon>CustomMessageBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Datatable2Class.cs" />
+    <Compile Include="Entities\CSD.Sio.cs" />
+    <Compile Include="Entities\CustomNetReportException.cs" />
+    <Compile Include="Entities\WS_DynamicValue.cs" />
+    <Compile Include="Controls\HiddenCheckBoxesTreeView.cs" />
+    <Compile Include="IZVCompetenze.cs" />
+    <Compile Include="IZVCompetenzeWorkflow.cs" />
+    <Compile Include="IZVEngineObject.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="Utility.cs" />
+    <Compile Include="ZVBaseDrawer.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ZVCalcolaScadenza.cs" />
+    <Compile Include="ZVCambioStato.cs" />
+    <Compile Include="ZVCompiler.cs" />
+    <Compile Include="ZVCompression.cs" />
+    <Compile Include="ZVDataLayer.cs" />
+    <Compile Include="ZVEnums.cs" />
+    <Compile Include="ZVEvidenza.cs" />
+    <Compile Include="ZVImageResources.cs" />
+    <Compile Include="ZVLinkOrigine.cs" />
+    <Compile Include="ZVListForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ZVListForm.Designer.cs">
+      <DependentUpon>ZVListForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ZVMarkUpForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ZVMarkUpForm.Designer.cs">
+      <DependentUpon>ZVMarkUpForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ZVModalForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ZVModalForm.designer.cs">
+      <DependentUpon>ZVModalForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ZVOperazione.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ZVAzione.cs" />
+    <Compile Include="ZVParametroEsterno.cs" />
+    <Compile Include="ZVStato.cs" />
+    <Compile Include="ZVStatusBar.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ZVSurrogateHelper.cs" />
+    <Compile Include="ZVVariabili.cs" />
+    <Compile Include="ZVWorkflow.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferences Include="Web References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.2.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 2.0 %28x86%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.0 %28x86%29</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="CustomMessageBox.resx">
+      <DependentUpon>CustomMessageBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <SubType>Designer</SubType>
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ZVListForm.resx">
+      <DependentUpon>ZVListForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ZVMarkUpForm.resx">
+      <DependentUpon>ZVMarkUpForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ZVModalForm.resx">
+      <DependentUpon>ZVModalForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Image1.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\zoom_out.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\A.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add2.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\app.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Attività interne.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\B.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\browse.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\C.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\calculator.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\camera.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Campagne.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cd.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cd_music.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cd_to_audio.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cent.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\chiuso_False.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\chiuso_True.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Cliente.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\clock.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Collapse.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CollapseAllGroupsButton.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ColumnsButton.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\comp.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\comp_search.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\comp_web.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Contatti.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\convert_to_audio.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\copy.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cross.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cut.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\D.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\database.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\database_link.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\database_options.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\database_table.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\database_table_link.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Deleghe.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Desktop.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\doc_add.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\doc_app.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\doc_edit.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\doc_favor.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\doc_history.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\doc_new2.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\doc_new.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\doc_refresh.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\doc_remove2.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\doc_remove.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\doc_star.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\doc_stats.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\doc_stop.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\doc_web2.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\doc_web.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\dollar.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\doors.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\down2.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\down.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\down_left.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DownArrow.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\dvd.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\E.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\email.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\email_open.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Eventi.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\exit.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Expand.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ExpandAllGroupsButton.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\extract_audio.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fast_forward.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\favor.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\favor_add.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\favor_edit.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\favor_remove.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\flagClienteEffettivo_True.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\flagInCampagna_True.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\flagPossedutoRivendibile_True.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\flagProdottoMktBloccato_True.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\flagRifiutato_True.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\folder.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\folder_add.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\folder_app.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\folder_doc.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\folder_edit.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\folder_favor.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\folder_font.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\folder_in.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\folder_music.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\folder_out.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\folder_remove.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\folder_stats.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\folders.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\font.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\funnel.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\G1.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\G.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\hand_saw.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\help.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\home.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\horn.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Icon1.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\import_digital.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\info.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\key.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ko.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\left2.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\left.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\left_right.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\left_up.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\library.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\load.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\lock.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\M.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Marketing.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Messaggi2.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Messaggi.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Messaggi.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\modalitaPossessoProdotto_N.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\modalitaPossessoProdotto_P.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\music2.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\music.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\notes.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\NULL.ICO" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ok2.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ok.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\options1.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\options2.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\options.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\P.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\paste.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pause.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pen_green.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pen_yellow.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\picture.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\picture_preview.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pig.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\play.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\play_stop.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\point_blue.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\point_cyan.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\point_green.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\point_yellow.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\print_preview.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\printer.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\rect_blue.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\rect_cyan.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\rect_green.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\rect_red.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\rect_yellow.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\recycle_empty.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\recycle_full.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\redo.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\refresh.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Relazioni.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\remove2.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\remove.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\rewind.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\right2.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\right.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\S.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\save.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Scadenze00.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\scaner.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\schedulabile_True.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\search.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\setup.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\skip_backward.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\skip_forward.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\smile.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sql.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\stats.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\stop2.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\stop.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\support.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\table.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\table_link.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tables.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\thunderbolt.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tipo_Attività_Interne.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tipo_Campagne.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tipo_Contatti.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tipo_Deleghe.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tipo_Eventi.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tipo_Messaggi.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tipo_Relazioni.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tipoProdottoMkt_P.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tipoProdottoMkt_S.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\triang_cyan.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\triang_green.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\triang_red.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\triang_yellow.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\U.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\undo.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\unlock.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\up2.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\up.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\up_down.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\up_right.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\UpArrow.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\url.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user2.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user3.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user_add.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user_remove.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user_search.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\users.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\V.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\verso_C.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\verso_L.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\verso_P.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\wait.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\warning.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\web2.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\web.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\web_download.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\web_help2.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\web_help.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\web_music2.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\web_music.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\web_search2.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\web_search.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\web_upload.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\win_logo.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\window.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\window_logo.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\xml.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\zoom_in.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bandieraInizio.ICO" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bandiera.ICO" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\errore.ICO" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ShowTree16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Collapse9.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Expand9.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\HideTree16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MainCollapse13.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Resources\MainExpand13.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ZV_DataSet\ZV_DataSet.csproj">
+      <Project>{eab4d105-80a6-4f47-95ad-34f08169da5e}</Project>
+      <Name>ZV_DataSet</Name>
+      <Private>False</Private>
+    </ProjectReference>
+    <ProjectReference Include="..\ZV_Data\ZV_Data.csproj">
+      <Project>{b979fd4a-4480-435b-8425-b2933dd66fda}</Project>
+      <Name>ZV_Data</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ZV_Proxy\ZV_Proxy.csproj">
+      <Project>{f0bf0408-37d6-4ca4-a001-8169eae97e9a}</Project>
+      <Name>ZV_Proxy</Name>
+      <Private>False</Private>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Resources\delete.ico" />
+    <Content Include="Resources\modificare.png" />
+    <Content Include="Resources\modifica_proprietà.png" />
+    <Content Include="Resources\WorkflowIcon.ico" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <PropertyGroup>
+    <PostBuildEvent>
+    </PostBuildEvent>
+  </PropertyGroup>
+</Project>

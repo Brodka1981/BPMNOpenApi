@@ -1,0 +1,103 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net9.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\BpmEngine\BpmDomain.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="ZVApplicazioneControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="ZVCampoCalcolatoControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="ZVCampoCheckBoxControlEsegui.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="ZVCampoCheckListControlEsegui.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="ZVCampoCKEditorTestoControlEsegui.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="ZVCampoComboBoxControlEsegui.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="ZVCampoComuneControlEsegui.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="ZVCampoDataControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="ZVCampoDataScadenzaControlEsegui.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="ZVCampoLabelControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="ZVCampoNumeroControlEsegui.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="ZVCampoTabellaControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="ZVCampoTabellaEstesaControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="ZVCampoTestoControlEsegui.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="ZVCorrelazioniControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Update="ZVApplicazioneControl.resx">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Update="ZVCampoCalcolatoControl.resx">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Update="ZVCampoCheckBoxControlEsegui.resx">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Update="ZVCampoCheckListControlEsegui.resx">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Update="ZVCampoCKEditorTestoControlEsegui.resx">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Update="ZVCampoComboBoxControlEsegui.resx">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Update="ZVCampoComuneControlEsegui.resx">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Update="ZVCampoDataControl.resx">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Update="ZVCampoDataScadenzaControlEsegui.resx">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Update="ZVCampoLabelControl.resx">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Update="ZVCampoNumeroControlEsegui.resx">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Update="ZVCampoTabellaControl.resx">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Update="ZVCampoTestoControlEsegui.resx">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+
+</Project>

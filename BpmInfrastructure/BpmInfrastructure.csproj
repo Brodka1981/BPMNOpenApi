@@ -1,0 +1,30 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net9.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Repositories\Class2.cs" />
+    <Compile Remove="Repositories\Class3.cs" />
+    <Compile Remove="Repositories\Class4.cs" />
+    <Compile Remove="Repositories\ProcessoDto.cs" />
+    <Compile Remove="Repositories\ProcessoMapper.cs" />
+    <Compile Remove="Repositories\QCRSVariableDomain.cs" />
+    <Compile Remove="Repositories\QCRSWorkflowDomain.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="10.0.3" />
+    <PackageReference Include="Microsoft.Extensions.Options" Version="10.0.5" />
+    <PackageReference Include="System.Data.SqlClient" Version="4.9.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Commands\" />
+    <Folder Include="Mappers\" />
+  </ItemGroup>
+
+</Project>
