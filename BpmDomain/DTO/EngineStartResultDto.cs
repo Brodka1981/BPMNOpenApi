@@ -1,0 +1,1 @@
+﻿public record EngineStartResultDto(long ProcessId);
